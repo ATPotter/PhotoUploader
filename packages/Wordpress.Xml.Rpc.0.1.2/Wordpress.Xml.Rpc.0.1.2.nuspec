@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Wordpress.Xml.Rpc</id>
+    <version>0.1.2</version>
+    <authors>Shaw Media,  Inc</authors>
+    <owners>Shaw Media,  Inc</owners>
+    <licenseUrl>https://github.com/ShawONEX/wordpress-xmlrpc-client/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ShawONEX/wordpress-xmlrpc-client</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET XMLRPC Client for Wordpress</description>
+    <releaseNotes>For full release notes see https://github.com/ShawONEX/wordpress-xmlrpc-client/blob/master/README.md</releaseNotes>
+    <language>en-US</language>
+    <tags>XMLRPC WORDPRESS</tags>
+    <dependencies>
+      <dependency id="AutoMapper" version="3.0.0" />
+      <dependency id="xmlrpcnet" version="2.5.0" />
+    </dependencies>
+  </metadata>
+</package>
