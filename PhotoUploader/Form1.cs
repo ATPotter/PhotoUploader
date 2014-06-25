@@ -10,6 +10,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Windows.Forms;
 using CookComputing.XmlRpc;
+using PictureTagger.ExifToolWrapper;
 using Wordpress;
 using Wordpress.Xml;
 using Wordpress.Xml.Rpc;
@@ -97,6 +98,24 @@ namespace PhotoUploader
 
         private void btnImg_Click(object sender, EventArgs e)
         {
+            var fi = new FileInfo("C:\\Program Files\\Utilities\\exiftool.exe");
+            var exifTool = new ExifToolWrapper(fi);
+
+            // Build our list of desired tags
+            var tagList = new List<string>();
+            tagList.AddRange(new String[]
+            {
+                "Title",
+                "Description",
+                "DateTimeOriginal"
+            });
+
+            FileInfo imageFi = new FileInfo(lblImage.Text);
+            var tagValues = exifTool.GetTagsFromFile(imageFi, tagList);
+
+
+
+
             var newMediaPost = default(newMediaDescriptor);
             newMediaPost.name = "ProgramaticallyUploadedImage.jpg";
             newMediaPost.type = "image/jpeg";
